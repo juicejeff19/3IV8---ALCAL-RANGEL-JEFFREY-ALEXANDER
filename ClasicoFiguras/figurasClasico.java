@@ -62,6 +62,7 @@ class figurasClasico{
             resultado = base*altura;
             System.out.println("El area del rectangulo es de: "+resultado);
             System.out.println("El perimetro del rectangulo es de "+perimetro);
+            break;
 
             case 5:
             System.out.println("Ingresa el valor de un lado");
@@ -73,6 +74,7 @@ class figurasClasico{
             resultado = (5*base*altura)/2;
             System.out.println("El area del pentagono es de: "+resultado);
             System.out.println("El perimetro del pentagono es de "+perimetro);
+            break;
 
 
 
