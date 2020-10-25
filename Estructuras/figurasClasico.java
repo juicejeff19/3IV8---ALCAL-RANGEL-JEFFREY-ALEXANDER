@@ -138,6 +138,9 @@ class figurasClasico{
                  if (edad<21) {
                 abono2= (int) (abono*.25)
                 System.out.println("su total sera de: "+abono);
+                default:
+                System.out.println("Gacias xd");
+    
                  }
             }
                 
