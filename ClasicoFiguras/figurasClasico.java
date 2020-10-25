@@ -4,9 +4,31 @@ class figurasClasico{
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
 
-        int base, altura, opcion, perimetro;
+        int base, altura, opcion, perimetro, edad, abono, abono2, socios;
         char letra;
         double resultado;
+
+        System.out.println("Elija el Programa que desea ejecutar: ");
+        System.out.println("1.Descuentos: ");
+        System.out.println("2: ");
+        System.out.println("3: ");
+        System.out.println("4: ");
+        System.out.println("5. ");
+        System.out.println("6.Figuras Clasico: ");
+        System.out.println("7: ");
+        System.out.println("8: ");
+        System.out.println("9: ");
+        System.out.println("10: ");
+        System.out.println("11: ");
+        System.out.println("12: ");
+        System.out.println("13: ");
+        System.out.println("14: ");
+
+        opcion = entrada.nextInt();
+
+        switch (opcion) {
+
+        case 6:
     do{
         System.out.println("Elija la opcion deseada: ");
         System.out.println("1.Calcular el area y perimetro de un cuadrado: ");
@@ -89,8 +111,45 @@ class figurasClasico{
         System.out.println("deaseas repetir?, si lo desea, escriba s");
         letra = entrada.next().charAt(0);
     }while(letra == 's');
+    break;
+
+    
+    case 1:
+    System.out.println("introduce tu edad porfavor");
+    edad = entrada.nextInt();
+
+    System.out.println("introduce el total de tu abono porfavor");
+    abono = entrada.nextInt();
+
+    if (edad>65) {
+        abono2 = (int) (abono*0.40);
+        System.out.println("su total sera de: "+abono2);
+
+    
+    }else {
+        if (edad<21){
+            System.out.println("¿Tus padres son socios? Escirbe <<0>> en caso de que la respuesta se afirmativa o <<1>> en caso de que sea negativa.");
+            socios = entrada.nextInt();
+            if (socios == 0) {
+                abono2 = (int) (abono*.45);
+                System.out.println("su total sera de: "+abono2);
+
+            }else{
+                 if (edad<21) {
+                abono2= (int) (abono*.25)
+                System.out.println("su total sera de: "+abono);
+                 }
+            }
+                
+        }
+    }
+
+
     
     }
+     
+
+}
 
 
 }
