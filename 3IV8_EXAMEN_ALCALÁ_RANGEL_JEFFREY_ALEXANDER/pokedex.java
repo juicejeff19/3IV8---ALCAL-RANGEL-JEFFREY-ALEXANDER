@@ -8,7 +8,7 @@ class pokedex{ //declaro la clase//
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in); //declaro el scanner//
 
-        int numero, opcion, pokemon, ataque;
+        int numero, opcion, pokemon, ataque; //declaración de variables//
         do{
 
     System.out.println("3IV8 ALCALA RANGEL JEFFREY ALEXANDER");
@@ -19,7 +19,7 @@ class pokedex{ //declaro la clase//
     System.out.println("3. squartle");
     System.out.println("4. Modo batalla");
 
-    opcion = entrada.nextInt();
+    opcion = entrada.nextInt(); //uso de scanner//
     
     
 
@@ -44,7 +44,7 @@ class pokedex{ //declaro la clase//
         System.out.println("¿desea repetir?, si es asi presione 1, si desea volver al menu presione el numero <<2>> dos veces");
         numero = entrada.nextInt();
         }while (numero == 1); //termino el do while//
-        break;
+        break; // rompe el codigo //
 
         case 2:
         do{
@@ -85,7 +85,7 @@ class pokedex{ //declaro la clase//
         }while (numero == 1);
         break;
 
-        case 4:
+        case 4: //modo pelea//
         do{
         System.out.println("Bienvenido al modo batalla");
         System.out.println("Elije a a tu pokemon");
@@ -93,7 +93,7 @@ class pokedex{ //declaro la clase//
         System.out.println("2. Bulbasaor");
         System.out.println("3. squartle");
         pokemon = entrada.nextInt();
-        if (pokemon == 1){
+        if (pokemon == 1){  //Utilización de if//
             System.out.println("Has elegido charmander");
             System.out.println("Tu enemigo sera bulbasour");
             
@@ -147,7 +147,7 @@ class pokedex{ //declaro la clase//
         
     
     numero = entrada.nextInt();
-}while (numero == 2);
+}while (numero == 2); //repetir hasta el menu//
     
     
 
@@ -161,7 +161,7 @@ class pokedex{ //declaro la clase//
 
 
 }
-}
+}  //termino del programa//
 
 
 
