@@ -61,7 +61,7 @@ class pokedex{ //declaro la clase//
 
 
        
-        System.out.println("¿desea repetir?, si es asi presione 1, si desea volver al menu presione el numero <<2>> dos veces");
+        System.out.println("¿desea repetir?, si es asi presione 1, si desea volver al menu presione el numero <<2>> dos veces, si quiere cerrar el programa ponga una r");
         numero = entrada.nextInt();
         }while (numero == 1);
         break;
@@ -80,12 +80,13 @@ class pokedex{ //declaro la clase//
         System.out.println("Ataque secundario: ataque agua; 58 daño");
 
        
-        System.out.println("¿desea repetir?, si es asi presione 1, si desea volver al menu presione el numero <<2>> dos veces");
+        System.out.println("¿desea repetir?, si es asi presione 1, si desea volver al menu presione el numero <<2>> dos veces, si quiere salir ponga una r");
         numero = entrada.nextInt();
         }while (numero == 1);
         break;
 
         case 4:
+        do{
         System.out.println("Bienvenido al modo batalla");
         System.out.println("Elije a a tu pokemon");
         System.out.println("1. Charmander");
@@ -132,7 +133,10 @@ class pokedex{ //declaro la clase//
             }
         }
 
-            
+        System.out.println("¿desea repetir?, si es asi presione 1, si desea volver al menu presione el numero <<2>> dos veces, si desea salir escriba r");
+        numero = entrada.nextInt();
+        }while (numero == 1);
+        break; 
         }
 
 
