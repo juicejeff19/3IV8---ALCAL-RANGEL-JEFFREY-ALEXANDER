@@ -126,9 +126,9 @@ class pokedex{ //declaro la clase//
             System.out.println("Elige tu ataque, (1= primario, 2= secundario");
             ataque = entrada.nextInt();
             if (ataque == 1){
-            System.out.println("has atcado a squartle (agua) con un ataque agua, el ataque es critico y squartle es derrotado");
+            System.out.println("has atcado a squartle (agua) con un ataque planta, el ataque es critico y squartle es derrotado");
             }else{
-                System.out.println("has atcado a squartle (agua) con un ataque agua, el ataque es critico y squartle es derrotado");
+                System.out.println("has atcado a squartle (agua) con un ataque planta, el ataque es critico y squartle es derrotado");
                 System.out.println("squartle ha sido derrotado y esta cansado");
             }
         }
