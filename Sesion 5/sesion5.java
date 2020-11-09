@@ -24,8 +24,8 @@ public class sesion5{
         System.out.println("4. Matriz");
         
         casoele = entrada.nextInt();
-        if (casoele<0 || casoele>4){
-            System.out.println("Ojo a la comedia");
+        if (casoele<0 || casoele>5){
+            System.out.println("Mira alchile si vas a elegir una que exista no elijas ninguna, neta, mejor duermete otro rato");
         }
         switch (casoele){
 
@@ -46,6 +46,10 @@ public class sesion5{
             op.amloypena(array);
             op.ninosprodigio(array);
             op.tumuerestuvives(array);
+            break;
+            case 5:
+            op.SM();
+
 
         }
 
@@ -156,5 +160,41 @@ public class sesion5{
         System.out.println("El numero de aprobados es: "+vivo);
         System.out.println("El numero de reprobados(nomerepruebe xfa) es: "+muerto);
     }
+    public void SM(){
+
+        
+        int matrizA[][] = new int [3][3];
+        int matrizB[][] = new int [3][3];
+        int matrizS[][] = new int [3][3];
+        int i, j;
+
+        System.out.println("Datos de la primera matriz");
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++){
+                System.out.print("Escribe el valor de [" + i + "] [" + j + "]: ");
+                matrizA[i][j] = entrada.nextInt();
+            }
+        }
+        System.out.println("Datos de la segunda matriz");
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++){
+                System.out.print("Escribe el valor de [" + i + "] [" + j + "]: ");
+                matrizB[i][j] = entrada.nextInt();
+            }
+        }
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++){
+                 matrizS[i][j] = matrizA[i][j] + matrizB[i][j];
+            }
+        }
+        System.out.println("Matriz resultante de la suma:");
+        for (i = 0; i <= 2; i++){
+            for (j = 0; j <= 2; j++) {
+                System.out.println(matrizS[i][j]);
+            }           
+        }
+    }
+
 }
+
 
