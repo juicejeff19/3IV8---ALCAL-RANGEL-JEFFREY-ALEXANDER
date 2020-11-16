@@ -24,7 +24,7 @@ public class sesion5{
         System.out.println("4. Matriz");
         
         casoele = entrada.nextInt();
-        if (casoele<0 || casoele>5){
+        if (casoele<0 || casoele>4){
             System.out.println("Mira alchile si vas a elegir una que exista no elijas ninguna, neta, mejor duermete otro rato");
         }
         switch (casoele){
@@ -47,7 +47,7 @@ public class sesion5{
             op.ninosprodigio(array);
             op.tumuerestuvives(array);
             break;
-            case 5:
+            case 4:
             op.SM();
 
 
