@@ -24,7 +24,7 @@ salarios babyoda = new salarios();
 //Aqui ira el segundo objeto
 //Aqui ira el tercer objeto
 System.out.println("*Menu*\nIntroduzca el numero del programa a ejecutar");
-System.out.println("1. Saldos\n2. Figuras\n3. Telefonia");
+System.out.println("1. Salarios\n2. \n3. ");
 bee = entrada.nextInt();
 if(bee<1 || bee>3){
     System.out.println("Ojo a la comedia");
