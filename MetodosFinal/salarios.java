@@ -5,8 +5,10 @@ public class salarios{
         private String nombre;
         Scanner entrada = new Scanner(System.in);
     public void menuprograma(){
-        System.out.println("¿Que tipo de trabajador es usted?\n1. Obrero\n2. Administrativo");
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Porfavor, Introduzca su nombre");
+        nombre = entrada.nextLine();
+        System.out.println("¿Que tipo de trabajador es usted?\n1. Obrero\n2. Administrativo");
         puesto = entrada.nextInt();
         switch(puesto){
             case 1:
@@ -63,6 +65,7 @@ public class salarios{
        
         }
         public void seguridad1(){
+            System.out.println("Su nombre es: "+nombre);
             //tuve que utilizar enteros para identificar el nombre ya que no me salia bien mediante Strings :(
             System.out.println("Identifiquese porfavor, los nombres de trabajadores en calidad de obreros son:\n 1.John, 2.Cesar, 3.Isaac, 4.Alejandro\nLos nombres de los trabajadores en calidad de administratvos son:\n 5.Gabriel, 6.Dean, 7.Fernando, 8.Victor\n Porfavor, digite la ID que aparece antes de su nombre");
             id = entrada.nextInt();
@@ -73,6 +76,7 @@ public class salarios{
             }
         }
         public void seguridad2(){
+            System.out.println("Su nombre es: "+nombre);
             //tuve que utilizar enteros para identificar el nombre ya que no me salia bien mediante Strings :(
             System.out.println("Identifiquese porfavor, los nombres de trabajadores en calidad de obreros son:\n 1.John, 2.Cesar, 3.Isaac, 4.Alejandro\nLos nombres de los trabajadores en calidad de administratvos son:\n 5.Gabriel, 6.Dean, 7.Fernando, 8.Victor\n Porfavor, digite la ID que aparece antes de su nombre");
             id = entrada.nextInt();
