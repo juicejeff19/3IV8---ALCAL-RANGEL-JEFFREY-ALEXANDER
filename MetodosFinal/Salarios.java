@@ -36,8 +36,8 @@ public class Salarios{
 
             case 1:
             nombre();
-            identificacion();
-
+            Salariosadmin obj78 = new Salariosadmin(nombre, puesto, id);
+            obj78.sueldoa();
             break;
         }
     }

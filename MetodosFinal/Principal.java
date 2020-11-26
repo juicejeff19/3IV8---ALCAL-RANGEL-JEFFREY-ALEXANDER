@@ -33,9 +33,11 @@ switch (bee){
     break;
     
     case 2:
+    cesar.identificacion();
     break;
 
     case 3:
+    cesar.identificacion();
     break;
 
     default: System.out.println(":))");
