@@ -18,9 +18,10 @@ public class Principal{
 public static void menu(){
     Scanner entrada = new Scanner(System.in);
 int bee;
+Salarios cesar = new Salarios();
 //vuelvo a crear los objetos ya que no me los reconocia cuando solo estaban en Main :(
 System.out.println("*Menu*\nIntroduzca el numero del programa a ejecutar");
-System.out.println("1. Salarips\n2. Proovedores\n3. Biblioteca");
+System.out.println("1. Salarios\n2. Proovedores\n3. Biblioteca");
 bee = entrada.nextInt();
 if(bee<1 || bee>3){
     System.out.println("Ojo a la comedia");
@@ -28,6 +29,7 @@ if(bee<1 || bee>3){
 switch (bee){
     //se declaran los casos
     case 1:
+    cesar.identificacion();
     break;
     
     case 2:

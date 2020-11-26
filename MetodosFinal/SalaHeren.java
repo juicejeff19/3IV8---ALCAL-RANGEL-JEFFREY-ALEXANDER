@@ -5,11 +5,10 @@ public class SalaHeren{
 
     public SalaHeren(){
     }
-    public Sueldo2(String nombre, int puesto, int id){
+    public SalaHeren(String nombre, int puesto, int id){
         this.nombre = nombre;
         this.puesto = puesto;
         this.id = id;
-        this.sueldo = sueldo;
     }
     public String getNombre(){
         return nombre;
@@ -36,4 +35,4 @@ public class SalaHeren{
     }
     
 }
-}
+
