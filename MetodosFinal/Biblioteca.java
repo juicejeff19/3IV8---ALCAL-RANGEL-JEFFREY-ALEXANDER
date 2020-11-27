@@ -9,44 +9,52 @@ public class Biblioteca{
         registro();
     }
     public void registro(){
-        int [] prestados = new int [a];
-        int [] existencias = new int [a];
-        String[] autor = new String [a];
-        String[] titulo = new String [a]; 
+        int [] prestados = new int [libros];
+        int [] existencias = new int [libros];
+        String[] autor = new String [libros];
+        String[] titulo = new String [libros]; 
         titulo = titulom(titulo);
         autor = autorm(autor, titulo);
         existencias = existenciasm(existencias, titulo);
         prestados = prestadosm(prestados, titulo);
-        OperacionesLib = new OperacionesLib(titulo, autor, existencias, prestados);
-        objeto.principalib();
+        OperacionesLib xd = new OperacionesLib(titulo, autor, existencias, prestados);
+        xd.Menu();
     }
     public String[] titulom(String[] titulo){
         for(int i=0;i<titulo.length;i++){
             System.out.println("Ingrese el nombre del libro");
-            titulo=entrada.nextLine();
+            titulo[i]=entrada.nextLine();
         }
-        return titulo
+        return titulo;
     }
-    public String[] autorem(String[] autore, String[]titulo){
-        for (int i=0; i<autores.length;i++){
+    public String[] autorm(String[] autor, String[]titulo){
+        for (int i=0; i<autor.length;i++){
             System.out.println("Ingrese el autor de "+titulo[i]);
-            autores[i] = entrada.nextLine();
+            autor[i] = entrada.nextLine();
         }
-        return autores;
+        return autor;
     }
-    public int[] Ejemplares(int[]existencias, String[] titulo){
+    public int[] existenciasm(int[]existencias, String[] titulo){
         for (int i=0; i<existencias.length;i++){
         System.out.println("Ingrese el numero de existencias de el libro "+ titulo[i]);
         existencias[i] = entrada.nextInt();
         }
-    return ejemplares;
+    return existencias;
     }
-    public int[] Prestados(int []prestados, String[]titulo){
+    public int[] prestadosm(int []prestados, String[]titulo){
         for (int i=0; i<prestados.length;i++){
         System.out.println("Ingrese el numero de ejemplares prestados de "+ titulo[i]);
         prestados[i] = entrada.nextInt();
         }
-        }
+        
     return prestados;
+}
+public int getlibros(){
+    return libros;
     }
+
+public void setlibros(){
+        this.libros = libros;
+    }
+
 }
