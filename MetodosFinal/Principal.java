@@ -20,6 +20,7 @@ public static void menu(){
 int bee;
 Salarios cesar = new Salarios();
 Proovedores tintin = new Proovedores();
+Biblioteca arthur = new Biblioteca();
 //vuelvo a crear los objetos ya que no me los reconocia cuando solo estaban en Main :(
 System.out.println("*Menu*\nIntroduzca el numero del programa a ejecutar");
 System.out.println("1. Salarios\n2. Proovedores\n3. Biblioteca");
@@ -38,7 +39,7 @@ switch (bee){
     break;
 
     case 3:
-    cesar.identificacion();
+    arthur.registro();
     break;
 
     default: System.out.println(":))");
