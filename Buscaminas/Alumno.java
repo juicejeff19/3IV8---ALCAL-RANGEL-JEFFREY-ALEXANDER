@@ -1,9 +1,9 @@
-public class Alumno{
+public class Alumno{ //se crea una clase alumno para desplegar mis datos
     private String nom;
     private String grupo;
     private float boleta;
     
-
+//metodo alumno
         public void alumno(){
             nom="Alcala Rangel Jeffrey Alexander";
             grupo="3IV8";

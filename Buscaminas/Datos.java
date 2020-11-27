@@ -10,6 +10,7 @@ public class Datos{
     public Datos(){
     }
     public void identificacion(){
+        //se le piden los datos al usuario
         System.out.println("¡Bienvenido gamer!\nSe te solcitaran algunos datos con el fin de personalizar tu experiencia :)");
         System.out.println("Porfavor, ingresa tu nombre");
         nombre = entrada.nextLine();
@@ -17,6 +18,7 @@ public class Datos{
         gamertag = entrada.nextLine();
         System.out.println("Ese es un gran gamertag, ahora, diseña tu id, recuerda que tiene que ser un numero entero");
         id = entrada.nextInt();
+        //se le pide al usuario que elija la dificultad del juego, cada dificultad invocara a un metodo distinto
         System.out.println("Instrucciones:\nTienes un numero limitado de intentos, tendras que encontrar las minas para asi desactivarlas\n¿Quien no queria ser un Desactivador de minas de niño?");
         System.out.println("Selecciona la dificultad\n1. Facil\n2. Intermedia\n3 .Dificil\4. Imposible");
         decision = entrada.nextInt();

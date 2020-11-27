@@ -9,8 +9,10 @@ public class Principal{
         int bigchungus;
         System.out.println("3IV8 ALCALA RANGEL JEFFREY ALEXANDER");
         do{
+            //se llama al menu desde donde quiera que este
             Principal.menu();
                 System.out.println("Si quiere volver al menu escriba <<1>>, si quiere cerrar el programa escriba cualquier cosa");
+                //funcion para repetir el menu
                 bigchungus = entrada.nextInt();
         }while (bigchungus == 1);
     }
@@ -21,6 +23,7 @@ int bee;
 //se crean los objetos para invocar a los metodos
 Datos exa = new Datos();
 Alumno pug = new Alumno();
+//se piden los datos
 System.out.println("*Menu*\nIntroduzca el numero del programa a ejecutar");
 System.out.println("1. Buscaminas\n2. Datos del Alumno");
 bee = entrada.nextInt();
