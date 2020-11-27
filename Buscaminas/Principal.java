@@ -33,12 +33,26 @@ if(bee<1 || bee>3){
 switch (bee){
     //se declaran los casos
     case 1:
+    try{
     exa.identificacion();
+}catch(Exception e){
+    //mensaje de error
+    System.out.println("Ojo a la comedia");
+    //saber el tipo de error
+    System.out.println("Error: "+ e.getMessage());
+}
     break;
     
     case 2:
+    try{
     pug.alumno();
     break;
+    }catch(Exception e){
+        //mensaje de error
+        System.out.println("Ojo a la comedia");
+        //saber el tipo de error
+        System.out.println("Error: "+ e.getMessage());
+    }
 
     default: System.out.println(":))");
 
