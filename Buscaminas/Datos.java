@@ -28,8 +28,15 @@ public class Datos{
         dear.juego();
         }else if(decision==2){
             System.out.println("Estamos listos para empezar :), La dificultad que has elegido es Intermedia");
+            dear.juego1();
 
-        }else{
+        }else if(decision==3){
+            System.out.println("Estamos listos para empezar :), La dificultad que has elegido es Dificil");
+            dear.juego2();
+
+        }else  if(decision==4){
+            System.out.println("Estamos listos para empezar :), La dificultad que has elegido es Imposible");
+            dear.juego3();
 
         }
 
