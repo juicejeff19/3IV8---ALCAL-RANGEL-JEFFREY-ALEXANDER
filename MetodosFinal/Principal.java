@@ -39,7 +39,7 @@ switch (bee){
     break;
 
     case 3:
-    arthur.registro();
+    arthur.libros();
     break;
 
     default: System.out.println(":))");

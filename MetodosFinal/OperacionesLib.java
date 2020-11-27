@@ -58,7 +58,7 @@ public class OperacionesLib extends BibliHeren{
 
     //muestra listado y lee libro a consultar
     public void Mostrarlibros(){
-    System.out.println("\n***LIBROS***");
+    System.out.println("LIBROS");
     for (int i=0; i<getTitulo().length; i++){
     System.out.println((i+1)+". "+getTitulo()[i]);
     System.out.println("Autor: "+getAutor()[i]);
