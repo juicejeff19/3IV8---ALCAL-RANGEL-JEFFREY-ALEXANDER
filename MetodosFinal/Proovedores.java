@@ -11,6 +11,7 @@ public class Proovedores{
 
 //recopilacion de datos
     public void recopilacion(){
+        Poperaciones isaac = new Poperaciones(nombre, id, productos, precios, cantidad);
         System.out.println("A continuación se le pediran sus datos y los del pedido");
         System.out.println("Porfavor, ingrese su nombre");
         nombre = entrada.nextLine();
@@ -20,6 +21,8 @@ public class Proovedores{
         productosA();
         cantidadA();
         preciosA();
+        isaac.princip();
+
     }
     //llenado de arreglo productos
     public void productosA(){
