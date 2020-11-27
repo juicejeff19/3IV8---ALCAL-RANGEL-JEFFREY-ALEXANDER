@@ -37,11 +37,6 @@ public class Buscaminas extends Heren{
            			}
        		}while (ntminas<=10);
        
-       
- 	   // for(int xx=0;xx<20;xx++)
-	   //	for (int yy=0;yy<20;yy++)
-	   //     if(tablero [xx][yy]==1)
-	   //     System.out.println("Fila   "+(xx+1)+"     columna "+(yy+1)); 
       
         System.out.println("\n****************************************************************");
         System.out.println("\nHola "+getGamertag()+"                                          *");
@@ -182,12 +177,6 @@ public class Buscaminas extends Heren{
                       ntminas++;
                            }
                    }while (ntminas<=10);
-           
-           
-            // for(int xx=0;xx<20;xx++)
-           //	for (int yy=0;yy<20;yy++)
-           //     if(tablero [xx][yy]==1)
-           //     System.out.println("Fila   "+(xx+1)+"     columna "+(yy+1)); 
           
             System.out.println("\n****************************************************************");
             System.out.println("\nHola "+getGamertag()+"                                         *");
@@ -318,11 +307,6 @@ public class Buscaminas extends Heren{
                                }
                        }while (ntminas<=10);
                
-               
-                // for(int xx=0;xx<20;xx++)
-               //	for (int yy=0;yy<20;yy++)
-               //     if(tablero [xx][yy]==1)
-               //     System.out.println("Fila   "+(xx+1)+"     columna "+(yy+1)); 
               
                 System.out.println("\n****************************************************************");
                 System.out.println("\nHola "+getGamertag()+"                                         *");
@@ -451,12 +435,6 @@ public class Buscaminas extends Heren{
                               ntminas++;
                                    }
                            }while (ntminas<=10);
-                   
-                   
-                    // for(int xx=0;xx<20;xx++)
-                   //	for (int yy=0;yy<20;yy++)
-                   //     if(tablero [xx][yy]==1)
-                   //     System.out.println("Fila   "+(xx+1)+"     columna "+(yy+1)); 
                   
                     System.out.println("\n****************************************************************");
                     System.out.println("\nHola "+getGamertag()+"                                         *");
