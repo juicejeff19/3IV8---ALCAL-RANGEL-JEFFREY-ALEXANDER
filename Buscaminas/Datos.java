@@ -20,7 +20,7 @@ public class Datos{
         id = entrada.nextInt();
         //se le pide al usuario que elija la dificultad del juego, cada dificultad invocara a un metodo distinto
         System.out.println("Instrucciones:\nTienes un numero limitado de intentos, tendras que encontrar las minas para asi desactivarlas\n¿Quien no queria ser un Desactivador de minas de niño?");
-        System.out.println("Selecciona la dificultad\n1. Facil\n2. Intermedia\n3 .Dificil\4. Imposible");
+        System.out.println("Selecciona la dificultad\n1. Facil\n2. Intermedia\n3 .Dificil\n4. Imposible");
         decision = entrada.nextInt();
         //creo el objeto que me llevara al juego, mandandolo con mis variables recopiladas
         Buscaminas dear = new Buscaminas(nombre, gamertag, id);

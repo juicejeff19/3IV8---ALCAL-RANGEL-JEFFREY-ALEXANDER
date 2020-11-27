@@ -14,8 +14,8 @@ public class Buscaminas extends Heren{
     //juego basado en el de Mitchel Hdz ((2016))
 	public void juego(){
 		
-		//se crea un array, de 20x20, el cual sera nuesto "Tablero", aunque no se representara graficamente
-		int tablero [][]= new int[10][10];
+		//se crea un array, de 215x15, el cual sera nuesto "Tablero", aunque no se representara graficamente
+		int tablero [][]= new int[15][15];
 		double w=0;
   		double z=0;
 		int ntminas=0;
