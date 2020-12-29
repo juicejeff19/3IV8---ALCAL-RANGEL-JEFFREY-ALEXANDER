@@ -5,21 +5,25 @@
  */
 package buscaminas2;
 import javax.swing.*; 
+import java.util.*;
 
 /**
  *
  * @author juice_pjuorme
  */
 public class jugador extends javax.swing.JFrame {
-    String[] jugador = new String[10];
-    String nom;
+    public String nom;
     
 
     /**
      * Creates new form jugador
      */
-    public jugador() {
+    public jugador(String nom) {
+       
         initComponents();
+    }
+
+    jugador() {
     }
 
     /**
@@ -148,29 +152,19 @@ public class jugador extends javax.swing.JFrame {
     private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
         // TODO add your handling code here:
         nom = this.nombre.getText();
-        jugador[0]=nom;
-        JFrame f;
-        f=new JFrame();
-       JOptionPane.showMessageDialog(f,"Se ha registrado el jugador: "+jugador[0]);
+        RegistrarJugadores bee = new RegistrarJugadores(nom);
+        bee.Registrar();
         
     }//GEN-LAST:event_registrarActionPerformed
 
     private void verJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verJugadoresActionPerformed
-    JFrame f;
-        f=new JFrame();
-        JOptionPane.showMessageDialog(f,"Los jugadores registrados son");
-        for (int i=0;i<jugador.length;i++) {
-            if(jugador[i].isEmpty()){
-                JOptionPane.showMessageDialog(f,"No se ha registrado un jugador numero: "+i);
-            }
-            JOptionPane.showMessageDialog(f,jugador[i]);
-        }
+   
     }//GEN-LAST:event_verJugadoresActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -197,7 +191,7 @@ public class jugador extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jugador().setVisible(true);
+                new jugador(nom).setVisible(true);
                 
             }
         });
@@ -214,4 +208,12 @@ public class jugador extends javax.swing.JFrame {
     private javax.swing.JButton registrar;
     private javax.swing.JButton verJugadores;
     // End of variables declaration//GEN-END:variables
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 }

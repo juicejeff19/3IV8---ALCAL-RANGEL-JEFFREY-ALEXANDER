@@ -9,7 +9,11 @@ package buscaminas2;
  *
  * @author juice_pjuorme
  */
-public class Buscaminas2 {
+public class Buscaminas2{
+
+    public Buscaminas2() {
+    }
+    
 
     /**
      * @param args the command line arguments
@@ -18,9 +22,9 @@ public class Buscaminas2 {
         // TODO code application logic here
         Ventana v;
         v = new Ventana();
-        jugador j;
-        j=new jugador();
-        j.setVisible(true);
+        jugador ju;
+        ju=new jugador();
+        ju.setVisible(true);
         
     }
     
