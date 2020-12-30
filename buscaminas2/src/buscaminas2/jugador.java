@@ -18,13 +18,12 @@ public class jugador extends javax.swing.JFrame {
     /**
      * Creates new form jugador
      */
-    public jugador(String nom) {
+    public jugador() {
        
         initComponents();
     }
 
-    jugador() {
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,9 +40,9 @@ public class jugador extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        registrar = new javax.swing.JButton();
         nombre = new javax.swing.JTextField();
         verJugadores = new javax.swing.JButton();
+        regis = new javax.swing.JButton();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -69,14 +68,6 @@ public class jugador extends javax.swing.JFrame {
 
         jLabel3.setText("Nombre:");
 
-        registrar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        registrar.setText("REGISTRAR");
-        registrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registrarActionPerformed(evt);
-            }
-        });
-
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
@@ -87,6 +78,13 @@ public class jugador extends javax.swing.JFrame {
         verJugadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verJugadoresActionPerformed(evt);
+            }
+        });
+
+        regis.setText("REGISTRAR");
+        regis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regisActionPerformed(evt);
             }
         });
 
@@ -105,11 +103,11 @@ public class jugador extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
+                        .addGap(191, 191, 191)
+                        .addComponent(regis, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
                         .addComponent(verJugadores)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,10 +119,12 @@ public class jugador extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(verJugadores))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(verJugadores)
+                        .addGap(0, 58, Short.MAX_VALUE))
+                    .addComponent(regis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,7 +138,7 @@ public class jugador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -149,17 +149,20 @@ public class jugador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreActionPerformed
 
-    private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
-        // TODO add your handling code here:
-        nom = this.nombre.getText();
-        RegistrarJugadores bee = new RegistrarJugadores(nom);
-        bee.Registrar();
-        
-    }//GEN-LAST:event_registrarActionPerformed
-
     private void verJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verJugadoresActionPerformed
-   
+        RegistrarJugadores noterompas;
+        noterompas = new RegistrarJugadores(nom);
+        noterompas.mostrarJugadores();
     }//GEN-LAST:event_verJugadoresActionPerformed
+
+    private void regisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisActionPerformed
+        // TODO add your handling code here:
+        nom=nombre.getText();
+        RegistrarJugadores porfa;
+        porfa = new RegistrarJugadores(nom);
+        porfa.Registrar();
+        //porfa.Registrar();
+    }//GEN-LAST:event_regisActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +194,7 @@ public class jugador extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jugador(nom).setVisible(true);
+                new jugador().setVisible(true);
                 
             }
         });
@@ -205,7 +208,7 @@ public class jugador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nombre;
-    private javax.swing.JButton registrar;
+    private javax.swing.JButton regis;
     private javax.swing.JButton verJugadores;
     // End of variables declaration//GEN-END:variables
 

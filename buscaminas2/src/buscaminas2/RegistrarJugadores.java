@@ -12,29 +12,47 @@ import java.util.*;
  * @author juice_pjuorme
  */
 public class RegistrarJugadores extends jugador{
-    JFrame f;
 
+    JFrame f = new JFrame();
+    ArrayList<RegistrarJugadores> listaJugadores = new ArrayList<>();
+    String nomPros;
+    
+    RegistrarJugadores sad = new RegistrarJugadores(nomPros);
+    
     
     public RegistrarJugadores(String nom){
-        super(nom);
+        super();
         this.nom=nom;
     }
-    jugador j = new jugador(nom);
-    ArrayList<jugador> listaJugadores = new ArrayList<>();
+
+   
     
     public void Registrar(){
-    listaJugadores.add(j);
-    JOptionPane.showMessageDialog(f,"Se ha registrado el jugador: "+j.nom);
+         
+         nomPros = nom;
+        
+        listaJugadores.add(sad);
+        JOptionPane.showMessageDialog(f,"Se ha registrado el jugador: "+nomPros);
+
 }
     public void mostrarJugadores(){
-        for(int i=0;i<listaJugadores.size();i++){
-            if(listaJugadores.contains(j)){
-        f=new JFrame();
-       JOptionPane.showMessageDialog(f,"Se ha registrado el jugador: "+listaJugadores);
+for(int i = 0; i<listaJugadores.size(); i++){
+      
+                JOptionPane.showMessageDialog(f,"Libro: " + listaJugadores.get(i).nomPros);
+                
+               
             }
         }
+
+    public String getNomPros() {
+        return nomPros;
+    }
+
+    public void setNomPros(String nomPros) {
+        this.nomPros = nomPros;
+    }
     }
             
             
-}
+
 
