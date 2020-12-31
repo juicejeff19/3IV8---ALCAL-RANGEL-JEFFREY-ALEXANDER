@@ -23,8 +23,29 @@ public class ModificarLista extends Jugador{
         super(puntuacion, nombre, edad1, lista);
     }
     
-    public void agregar(){
-        
+    public void agregar(String nom, String edad){
+        Jugador objJugador = new Jugador();
+        objJugador.aceptaDatos(nom, edad);
+        lista.add(objJugador);
+        System.out.println("Jugador Registrado");
+        System.out.println("Prueba, el nombre es: "+objJugador.getNombre());
+    }
+    
+    public void consultar(){
+        if(lista.isEmpty()){
+            System.out.println("No hay libros registrados");
+        }else{
+            System.out.println("Los libros son:\n");
+            //debemos recorrer el arreglo
+            for(int i = 0; i<lista.size(); i++){
+                System.out.println("*****************");
+                System.out.println("Nombre: " + lista.get(i).getNombre()+ "\n"
+                                 + "Edad: " + lista.get(i).getEdad()+ "\n");
+                                 
+                System.out.println("*****************");
+            }
+            
+        }
     }
     
     

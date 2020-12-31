@@ -58,6 +58,9 @@ String nom;
         edad1=edad;
         System.out.println("La edad es: "+edad1);
         System.out.println("La puntuacion inicial es de: " +getPuntuacion());
+        ModificarLista o = new ModificarLista();
+        System.out.println("Los datos ingresados son validos, estos NO se podran cambiar despues");
+                
     }
     
 }
