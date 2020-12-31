@@ -40,7 +40,7 @@ public class VentanaJugador extends javax.swing.JFrame {
         empezar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         edadCuadro = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ver = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -114,10 +114,10 @@ public class VentanaJugador extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Ver puntuacion de partidas anteriores");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ver.setText("Ver puntuacion de partidas anteriores");
+        ver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                verActionPerformed(evt);
             }
         });
 
@@ -141,7 +141,7 @@ public class VentanaJugador extends javax.swing.JFrame {
                         .addGap(0, 74, Short.MAX_VALUE)
                         .addComponent(empezar, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(77, 77, 77)
-                        .addComponent(jButton1)
+                        .addComponent(ver)
                         .addGap(72, 72, 72))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -156,7 +156,7 @@ public class VentanaJugador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(empezar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(ver))
                 .addGap(26, 26, 26))
         );
 
@@ -183,12 +183,12 @@ public class VentanaJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreCuadroActionPerformed
 
     private void empezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empezarActionPerformed
-        String nom;
+        /*String nom;
         String edad;
         nom = nombreCuadro.getText();
         edad = edadCuadro.getText();
         Jugador d = new Jugador();
-        d.guardar(nom,edad);
+        d.guardar(nom,edad);*/
         //juego.empezar();
     }//GEN-LAST:event_empezarActionPerformed
 
@@ -197,16 +197,12 @@ public class VentanaJugador extends javax.swing.JFrame {
         
     }//GEN-LAST:event_edadCuadroActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void verActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verActionPerformed
        
-        ArrayList<Jugador> lista2 = new ArrayList<>();
-       
-        Jugador o = new Jugador();
-        o.verJugadores(lista2);
         //ArrayList<Jugador> listaMostrar = new ArrayList<>();
         //MostrarLista u = new MostrarLista();
         //u.mostrar(lista, listaMostrar);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_verActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,7 +243,6 @@ public class VentanaJugador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField edadCuadro;
     private javax.swing.JButton empezar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -257,5 +252,6 @@ public class VentanaJugador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     public javax.swing.JTextField nombreCuadro;
+    private javax.swing.JButton ver;
     // End of variables declaration//GEN-END:variables
 }

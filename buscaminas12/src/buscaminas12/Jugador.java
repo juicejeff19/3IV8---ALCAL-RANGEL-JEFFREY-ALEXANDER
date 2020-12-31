@@ -60,7 +60,8 @@ Jugador hola;
      @Override
 public String toString() {
     return "Nombre: " + this.getNombre() + "\n" +
-           "Edad: " + this.getEdad();
+           "Edad: " + this.getEdad()+
+            "Puntuacion" + this.getPuntuacion();
 }
 
     /**
@@ -79,13 +80,15 @@ public String toString() {
                 "Edad: "+hola.getEdad()+"\n"+
                         "Puntuacion Inicial: "+hola.getPuntuacion());
         System.out.println("*******************");
+        verJugadores(lista);
     return lista;
+    
         
         
     
 }
    
-    public void verJugadores(){
+    public void verJugadores(ArrayList lista){
         System.out.println("*******************");
         System.out.println("La lista de jugadores es:"+
                 "\n"+
@@ -94,9 +97,7 @@ public String toString() {
             System.out.println("La lista esta vacia");
         }else{
     for (int i=0;i<lista.size();i++) {
-        System.out.println("Nombre: "+lista.get(i).getNombre());
-        System.out.println("Edad: "+lista.get(i).getEdad());
-        System.out.println("Puntuacion: "+lista.get(i).getPuntuacion());
+        System.out.println(lista);
     }
     }
     }
