@@ -55,7 +55,20 @@ Jugador hola;
         this.edad1 = edad1;
     }
     
-    public void guardar(String nom, String edad){
+    
+     @Override
+public String toString() {
+    return "Nombre: " + this.getNombre() + "\n" +
+           "Edad: " + this.getEdad();
+}
+
+    /**
+     *
+     * @param nom
+     * @param edad
+     * @return
+     */
+    public ArrayList guardar(String nom, String edad){
     nombre = nom;
     edad1=edad;
     this.hola = new Jugador(puntuacion, nombre, edad1);
@@ -65,8 +78,21 @@ Jugador hola;
                 "Edad: "+hola.getEdad()+"\n"+
                         "Puntuacion Inicial: "+hola.getPuntuacion());
         System.out.println(":)");
+    return lista;
+        
+        
     
 }
+   
+    public void verJugadores(ArrayList lista){
+        System.out.println("La lista de jugadores es:"+
+                "\n"+
+                "*******");
+        System.out.println("Nombre: "+getNombre());
+    for (int i=0;i<lista.size();i++) {
+        System.out.println(lista);
+    }
+    }
     
    
 
