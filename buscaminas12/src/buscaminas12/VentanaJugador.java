@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package buscaminas12;
+import java.util.*;
 
 /**
  *
@@ -197,8 +198,14 @@ public class VentanaJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_edadCuadroActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Jugador f = new Jugador();
-        f.verJugadores();
+       
+        ArrayList<Jugador> lista2 = new ArrayList<>();
+       
+        Jugador o = new Jugador();
+        o.verJugadores(lista2);
+        //ArrayList<Jugador> listaMostrar = new ArrayList<>();
+        //MostrarLista u = new MostrarLista();
+        //u.mostrar(lista, listaMostrar);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

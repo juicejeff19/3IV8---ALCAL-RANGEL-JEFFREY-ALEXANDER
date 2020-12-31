@@ -23,12 +23,13 @@ Jugador hola;
     }
     
 
-    public Jugador(int puntuacion, String nombre, String edad1) {
+    public Jugador(int puntuacion, String nombre, String edad1, ArrayList lista) {
         super();
         this.hola = new Jugador();
         this.puntuacion = puntuacion;
         this.nombre = nombre;
         this.edad1 = edad1;
+        this.lista = lista;
     }
 
     public int getPuntuacion() {
@@ -71,26 +72,32 @@ public String toString() {
     public ArrayList guardar(String nom, String edad){
     nombre = nom;
     edad1=edad;
-    this.hola = new Jugador(puntuacion, nombre, edad1);
-    //objeto.setEdad(edad1);
+    this.hola = new Jugador(puntuacion, nombre, edad1, lista);
     lista.add(hola);
+        System.out.println("*******************");
         System.out.println("Nombre: "+hola.getNombre()+"\n"+
                 "Edad: "+hola.getEdad()+"\n"+
                         "Puntuacion Inicial: "+hola.getPuntuacion());
-        System.out.println(":)");
+        System.out.println("*******************");
     return lista;
         
         
     
 }
    
-    public void verJugadores(ArrayList lista){
+    public void verJugadores(){
+        System.out.println("*******************");
         System.out.println("La lista de jugadores es:"+
                 "\n"+
-                "*******");
-        System.out.println("Nombre: "+getNombre());
+                "*******************");
+        if(lista.isEmpty()){
+            System.out.println("La lista esta vacia");
+        }else{
     for (int i=0;i<lista.size();i++) {
-        System.out.println(lista);
+        System.out.println("Nombre: "+lista.get(i).getNombre());
+        System.out.println("Edad: "+lista.get(i).getEdad());
+        System.out.println("Puntuacion: "+lista.get(i).getPuntuacion());
+    }
     }
     }
     
