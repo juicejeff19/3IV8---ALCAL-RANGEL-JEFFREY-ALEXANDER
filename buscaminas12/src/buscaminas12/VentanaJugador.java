@@ -183,13 +183,15 @@ public class VentanaJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreCuadroActionPerformed
 
     private void empezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empezarActionPerformed
-        /*String nom;
+        String nom;
         String edad;
         nom = nombreCuadro.getText();
         edad = edadCuadro.getText();
-        Jugador d = new Jugador();
-        d.guardar(nom,edad);*/
+        //Jugador d = new Jugador();
+        //d.guardar(nom,edad);
         //juego.empezar();
+        Jugador b = new Jugador();
+        b.aceptaDatos(nom, edad);
     }//GEN-LAST:event_empezarActionPerformed
 
     private void edadCuadroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edadCuadroActionPerformed
@@ -241,7 +243,7 @@ public class VentanaJugador extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField edadCuadro;
+    public javax.swing.JTextField edadCuadro;
     private javax.swing.JButton empezar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -252,6 +254,6 @@ public class VentanaJugador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     public javax.swing.JTextField nombreCuadro;
-    private javax.swing.JButton ver;
+    public javax.swing.JButton ver;
     // End of variables declaration//GEN-END:variables
 }

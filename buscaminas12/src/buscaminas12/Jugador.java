@@ -15,21 +15,17 @@ private int puntuacion;
 String edad1, edad;
 String nombre;
 String nom;
-ArrayList<Jugador>lista=new ArrayList<>();
-Jugador hola;
 
     public Jugador() {
-        super();
+  
     }
     
 
     public Jugador(int puntuacion, String nombre, String edad1, ArrayList lista) {
         super();
-        this.hola = new Jugador();
         this.puntuacion = puntuacion;
         this.nombre = nombre;
         this.edad1 = edad1;
-        this.lista = lista;
     }
 
     public int getPuntuacion() {
@@ -56,52 +52,12 @@ Jugador hola;
         this.edad1 = edad1;
     }
     
-    
-     @Override
-public String toString() {
-    return "Nombre: " + this.getNombre() + "\n" +
-           "Edad: " + this.getEdad()+
-            "Puntuacion" + this.getPuntuacion();
-}
-
-    /**
-     *
-     * @param nom
-     * @param edad
-     * @return
-     */
-    public ArrayList guardar(String nom, String edad){
-    nombre = nom;
-    edad1=edad;
-    this.hola = new Jugador(puntuacion, nombre, edad1, lista);
-    lista.add(hola);
-        System.out.println("*******************");
-        System.out.println("Nombre: "+hola.getNombre()+"\n"+
-                "Edad: "+hola.getEdad()+"\n"+
-                        "Puntuacion Inicial: "+hola.getPuntuacion());
-        System.out.println("*******************");
-        verJugadores(lista);
-    return lista;
-    
-        
-        
-    
-}
-   
-    public void verJugadores(ArrayList lista){
-        System.out.println("*******************");
-        System.out.println("La lista de jugadores es:"+
-                "\n"+
-                "*******************");
-        if(lista.isEmpty()){
-            System.out.println("La lista esta vacia");
-        }else{
-    for (int i=0;i<lista.size();i++) {
-        System.out.println(lista);
-    }
-    }
+    public void aceptaDatos(String nom, String edad){
+        nombre=nom;
+        System.out.println("El nombre es: "+nombre);
+        edad1=edad;
+        System.out.println("La edad es: "+edad1);
+        System.out.println("La puntuacion inicial es de: " +getPuntuacion());
     }
     
-   
-
 }
