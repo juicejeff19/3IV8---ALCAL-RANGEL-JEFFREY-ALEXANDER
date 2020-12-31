@@ -4,23 +4,31 @@
  * and open the template in the editor.
  */
 package buscaminas12;
+import java.util.*;
 
 /**
  *
  * @author juice_pjuorme
  */
 public class Jugador extends VentanaJugador{
-private int puntuacion,edad;
-private String nombre;
+private int puntuacion;
+String edad1, edad;
+String nombre;
+String nom;
+ArrayList<Jugador>lista=new ArrayList<>();
+Jugador hola;
 
     public Jugador() {
-    }
-
-    public Jugador(int puntuacion, String nombre, int edad) {
         super();
+    }
+    
+
+    public Jugador(int puntuacion, String nombre, String edad1) {
+        super();
+        this.hola = new Jugador();
         this.puntuacion = puntuacion;
         this.nombre = nombre;
-        this.edad = edad;
+        this.edad1 = edad1;
     }
 
     public int getPuntuacion() {
@@ -28,7 +36,7 @@ private String nombre;
     }
 
     public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
+        this.puntuacion = 0;
     }
 
     public String getNombre() {
@@ -39,16 +47,26 @@ private String nombre;
         this.nombre = nombre;
     }
 
-    public int getEdad() {
-        return edad;
+    public String getEdad() {
+        return edad1;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setEdad(String edad1) {
+        this.edad1 = edad1;
     }
-    public void check(){
-        System.out.println("El nombre es: "+getNombre());
-    }
+    
+    public void guardar(String nom, String edad){
+    nombre = nom;
+    edad1=edad;
+    this.hola = new Jugador(puntuacion, nombre, edad1);
+    //objeto.setEdad(edad1);
+    lista.add(hola);
+        System.out.println("Nombre: "+hola.getNombre()+"\n"+
+                "Edad: "+hola.getEdad()+"\n"+
+                        "Puntuacion Inicial: "+hola.getPuntuacion());
+        System.out.println(":)");
+    
+}
     
    
 
