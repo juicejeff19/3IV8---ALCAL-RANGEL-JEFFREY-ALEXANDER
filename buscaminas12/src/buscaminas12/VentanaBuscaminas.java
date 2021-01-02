@@ -185,8 +185,7 @@ public class VentanaBuscaminas extends javax.swing.JFrame implements ActionListe
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       System.out.println("Se genera el archivo al salir");
-                    objlista.grabar();
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

@@ -7,6 +7,7 @@ package buscaminas12;
 
 import java.util.ArrayList;
 import java.io.*;
+import java.util.*;
 
 /**
  *
@@ -14,16 +15,22 @@ import java.io.*;
  */
 public class ModificarLista extends Jugador implements Serializable{
     
-    public ArrayList<Jugador> lista;
-    public ArchivoL objarchivo = new ArchivoL();
+    private ArrayList<Jugador> lista;
+    private ArchivoL objarchivo = new ArchivoL();
+    Scanner entrada = new Scanner(System.in);
+    
 
     public ModificarLista() {
-        lista = new ArrayList<>();
+        lista = new ArrayList<Jugador>();
         lista = objarchivo.leer();
     }
 
-    public ModificarLista(int puntuacion, String nombre, String edad1) {
-        super(puntuacion, nombre, edad1);
+    
+    @Override
+    public String toString() {
+        return "Nombre: "+getNombre()
+                + "Edad"+getEdad()
+                + "Puntuacion: "+ getPuntuacion();
     }
     
     public void agregar(String nom, String edad){
@@ -31,7 +38,6 @@ public class ModificarLista extends Jugador implements Serializable{
         objJugador.aceptaDatos(nom, edad, puntuacion);
         lista.add(objJugador);
         System.out.println("Jugador Registrado");
-        System.out.println("Prueba, el nombre es: "+objJugador.getNombre());
         
     }
     
@@ -42,16 +48,15 @@ public class ModificarLista extends Jugador implements Serializable{
         if(lista.isEmpty()){
             System.out.println("No hay jugadores registrados");
         }else{
-            System.out.println("Los libros son:\n");
+            System.out.println("Los jugadores son:\n");
             //debemos recorrer el arreglo
             for(int i = 0; i<lista.size(); i++){
                 System.out.println("*****************");
-                System.out.println(lista);
+                System.out.println("Nombre: "+lista.get(i).getNombre());
+                System.out.println("Edad: "+lista.get(i).getEdad());
                 System.out.println("*****************");
-            }
-            
+            }  
         }
-        
     }
 
     public ArrayList<Jugador> getLista() {
