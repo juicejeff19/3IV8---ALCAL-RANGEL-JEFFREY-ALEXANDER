@@ -5,13 +5,14 @@
  */
 package buscaminas12;
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author juice_pjuorme
  */
-public class Jugador extends VentanaJugador{
-private int puntuacion;
+public class Jugador extends VentanaJugador implements Serializable{
+int puntuacion;
 String edad1, edad;
 String nombre;
 String nom;
@@ -21,7 +22,7 @@ String nom;
     }
     
 
-    public Jugador(int puntuacion, String nombre, String edad1, ArrayList lista) {
+    public Jugador(int puntuacion, String nombre, String edad1) {
         super();
         this.puntuacion = puntuacion;
         this.nombre = nombre;
@@ -52,7 +53,7 @@ String nom;
         this.edad1 = edad1;
     }
     
-    public void aceptaDatos(String nom, String edad){
+    public void aceptaDatos(String nom, String edad, int puntuacion){
         nombre=nom;
         System.out.println("El nombre es: "+nombre);
         edad1=edad;

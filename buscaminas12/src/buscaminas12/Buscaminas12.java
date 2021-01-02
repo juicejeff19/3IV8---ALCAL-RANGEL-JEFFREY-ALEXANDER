@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package buscaminas12;
-
+import java.io.*;
 /**
  *
  * @author juice_pjuorme
  */
-public class Buscaminas12 {
+public class Buscaminas12 implements Serializable{
 
     /**
      * @param args the command line arguments
