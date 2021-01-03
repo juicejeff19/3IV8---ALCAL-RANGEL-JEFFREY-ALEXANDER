@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package serializacion;
+import conexionSQL.ConexionSQL;
 import formularios.Sistema;
 import java.io.*;
+import java.sql.Connection;
 import java.util.*;
 
 /**
@@ -17,6 +19,8 @@ public class ArchivoJ implements Serializable{
     un metodo de lectura seria contra-producente en mi programa,
     ya que cuenta con guardado en la nube gracias a MySQL
     */
+     ConexionSQL cc = new ConexionSQL();
+    Connection con=cc.conexion();
 
  
     void serializar(ArrayList<DatosSerial> listaseriar){
@@ -27,7 +31,6 @@ public class ArchivoJ implements Serializable{
             objout.close();
         
         }catch(Exception e){
-            System.out.println("Error ... "+ e.getMessage());
         
         }
     }
