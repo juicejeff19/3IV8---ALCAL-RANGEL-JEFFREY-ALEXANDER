@@ -6,23 +6,30 @@
 package serializacion;
 import formularios.Sistema;
 import java.io.*;
+import java.util.*;
 
 /**
  *
  * @author juice_pjuorme
  */
-public class ArchivoJ extends DatosSerial implements Serializable{
-    
-    private void readObject(java.io.ObjectInputStream stream)
-     throws IOException, ClassNotFoundException
-{
-   // Aqui debemos leer los bytes de stream y reconstruir el objeto
-}
+public class ArchivoJ implements Serializable{
+/*esta clase contendra el metodo para guardar, sin embargo considero que
+    un metodo de lectura seria contra-producente en mi programa,
+    ya que cuenta con guardado en la nube gracias a MySQL
+    */
 
-private void writeObject(java.io.ObjectOutputStream stream)
-     throws IOException
-{
-   // Aquí escribimos en stream los bytes que queramos que se envien por red.
-}
+ 
+    void serializar(ArrayList<DatosSerial> listaseriar){
+        try{
+            FileOutputStream out = new FileOutputStream("lista.txt");
+            ObjectOutputStream objout = new ObjectOutputStream(out);
+            objout.writeObject(listaseriar);
+            objout.close();
+        
+        }catch(Exception e){
+            System.out.println("Error ... "+ e.getMessage());
+        
+        }
+    }
     
 }
