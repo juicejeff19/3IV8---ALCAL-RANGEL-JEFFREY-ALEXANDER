@@ -20,11 +20,12 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+
 /**
  *
  * @author juice_pjuorme
  */
-public class Sistema extends javax.swing.JFrame {
+public class Sistema extends javax.swing.JFrame{
     ConexionSQL cc = new ConexionSQL();
     Connection con=cc.conexion();
 
@@ -400,6 +401,9 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btmActualizar;
