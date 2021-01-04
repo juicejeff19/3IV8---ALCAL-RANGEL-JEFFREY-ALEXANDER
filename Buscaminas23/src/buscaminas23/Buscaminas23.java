@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package buscaminas23;
-
+import formularios.*;
 /**
  *
  * @author juice_pjuorme
@@ -15,7 +15,8 @@ public class Buscaminas23 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Sistema s = new Sistema();
+        s.setVisible(true);
     }
     
 }
