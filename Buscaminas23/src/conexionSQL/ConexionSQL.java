@@ -21,7 +21,7 @@ public class ConexionSQL {
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conectar = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/buscaminas","root", "");
+            conectar = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3307/buscaminas","root", "");
             JOptionPane.showMessageDialog(null,"Conexion Exitosa");
             
         }catch(Exception e){

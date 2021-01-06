@@ -8,6 +8,7 @@ import buscaminas23.Cuadro;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import formularios.*;
 
 /**
  *
@@ -18,6 +19,7 @@ public class VentanaBuscaminas extends javax.swing.JFrame implements ActionListe
     int contadorMinas=0;
     int numeroCuadros=0;
     int contador=0;
+    int punt;
     /**
      * Creates new form VentanaBuscaminas
      */
@@ -30,14 +32,28 @@ public class VentanaBuscaminas extends javax.swing.JFrame implements ActionListe
         if(temp2.estaMinado()){
            javax.swing.JOptionPane.showMessageDialog(this, "Has dado en una mina, perdiste");
            this.contador=0;
+           javax.swing.JOptionPane.showMessageDialog(this, "Porfavor, actualiza el registro con la siguiente puntuacion: "+getPunt());
+           Sistema k = new Sistema();
+           k.setVisible(true);
         }else{
             temp2.setBackground(Color.GREEN);
             this.contador++;
+            this.punt++;
             if((numeroCuadros-contadorMinas)==contador){
                 javax.swing.JOptionPane.showMessageDialog(this, "Ganaste :)");
-                
+                javax.swing.JOptionPane.showMessageDialog(this, "Porfavor, actualiza el registro con la siguiente puntuacion: "+getPunt());
+           Sistema l = new Sistema();
+           l.setVisible(true);
             }
         }
+    }
+
+    public int getPunt() {
+        return punt;
+    }
+
+    public void setPunt(int punt) {
+        this.punt = punt;
     }
 
     /**
@@ -187,6 +203,7 @@ public class VentanaBuscaminas extends javax.swing.JFrame implements ActionListe
         this.panel_juego.removeAll();
         int nFilas;
         int nCol;
+        setPunt(0);
         nFilas = Integer.parseInt(this.filas.getText());
         nCol = Integer.parseInt(this.columnas.getText());
         
